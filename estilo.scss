@@ -18,7 +18,7 @@ body {
 #logo {
 	width: 120px;
 	height: 104px;
-	background: url(/logo.png);
+	background: url(/logo.png) 50% 50% / 120px 104px no-repeat;
 	margin: 0 auto;
 }
 
@@ -96,5 +96,11 @@ section {
 		& > p {
 			font-size: 24px;
 		}
+	}
+}
+
+@include hidpi {
+	#logo {
+		background-image: url(/logo@2x.png);
 	}
 }
