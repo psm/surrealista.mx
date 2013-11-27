@@ -1,0 +1,61 @@
+//
+// Hoja de estilo para Surrealista.mx
+//
+
+@import "attache";
+@import "//cloud.typography.com/671958/743122/css/fonts.css";
+
+$ff-normal: 'Archer SSm A', 'Archer SSm B';
+
+body {
+	font-family: $ff-normal;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: #4A4A4A;
+
+	color: #fff;
+	text-align: center;
+
+	& > h1 {
+		font-size: 48px;
+		text-transform: uppercase;
+	}
+
+	& > p {
+		color: #9B9B9B;
+		font-size: 24px;
+		font-weight: bold;
+	}
+}
+
+section {
+	& > p {
+		width: 95%;
+		max-width: 600px;
+		margin: 16px auto;
+
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	& > h2 {
+		width: 95%;
+		max-width: 800px;
+		margin: 48px auto 0;
+
+		font-size: 22px;
+		text-align: center;
+
+	}
+
+	& > h1 {
+		margin: 64px 0;
+
+		font-size: 32px;
+		font-weight: normal;
+		text-align: center;
+	}
+}
