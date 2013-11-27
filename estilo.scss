@@ -7,31 +7,53 @@
 
 $ff-normal: 'Archer SSm A', 'Archer SSm B';
 
+$c-principal: #DA275E;
+
 body {
 	font-family: $ff-normal;
 	margin: 0;
 	padding: 0;
 }
 
+#logo {
+	width: 120px;
+	height: 104px;
+	background: url(/logo.png);
+	margin: 0 auto;
+}
+
 header {
 	background: #4A4A4A;
+	@include vertical-gradient(#333, #444);
+
+	padding: 100px 0;
 
 	color: #fff;
 	text-align: center;
 
 	& > h1 {
-		font-size: 48px;
+		margin: 12px 0 0;
+
+		font-size: 24px;
 		text-transform: uppercase;
+		text-shadow: 0 1px 5px rgba(0,0,0, 0.15);
 	}
 
 	& > p {
+		margin: 0;
+
 		color: #9B9B9B;
-		font-size: 24px;
+		font-size: 18px;
 		font-weight: bold;
+		text-shadow: 0 1px 5px rgba(0,0,0, 0.15);
 	}
 }
 
 section {
+	background: #eee;
+	padding: 24px 0;
+	border-top: 1px solid #fff;
+
 	& > p {
 		width: 95%;
 		max-width: 600px;
@@ -52,10 +74,27 @@ section {
 	}
 
 	& > h1 {
-		margin: 64px 0;
+		margin: 48px 0;
 
 		font-size: 32px;
 		font-weight: normal;
 		text-align: center;
+	}
+
+	a {
+		color: $c-principal;
+		text-decoration: none;
+		border-bottom: 1px dotted $c-principal;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	header {
+		& > h1 {
+			font-size: 48px;
+		}
+		& > p {
+			font-size: 24px;
+		}
 	}
 }
