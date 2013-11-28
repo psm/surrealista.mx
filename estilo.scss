@@ -11,11 +11,11 @@ $c-principal: #DA275E;
 
 @font-face {
 	font-family: "social";
-	src: url('/fonts/ss-social-regular.eot');
-	src: url('/fonts/ss-social-regular.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/ss-social-regular.woff') format('woff'),
-		url('/fonts/ss-social-regular.ttf')  format('truetype'),
-		url('/fonts/ss-social-regular.svg#SSSocialRegular') format('svg');
+	src: url('/fonts/ss-social-circle.eot');
+	src: url('/fonts/ss-social-circle.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/ss-social-circle.woff') format('woff'),
+		url('/fonts/ss-social-circle.ttf')  format('truetype'),
+		url('/fonts/ss-social-circle.svg#SSSocialRegular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -59,12 +59,31 @@ header {
 		font-weight: bold;
 		text-shadow: 0 1px 5px rgba(0,0,0, 0.15);
 	}
+
+	& > a {
+		color: #fff;
+		text-decoration: none;
+
+		background: rgba(255,255,255, 0.05);
+		display: block;
+		width: 100px;
+
+		border: 1px solid #fff;
+		padding: 10px;
+		margin: 15px auto 0;
+
+		@include transition(0.2s ease background);
+		@include border-radius(10px);
+
+		&:hover {
+			background: rgba(255,255,255, 0.2);
+		}
+	}
 }
 
 section {
-	background: #eee;
-	padding: 24px 0;
-	border-top: 1px solid #fff;
+	padding: 50px 0 75px;
+	@include box-shadow(inset 0 1px rgba(255,255,255, 0.8));
 
 	& > p {
 		width: 95%;
@@ -86,7 +105,7 @@ section {
 	}
 
 	& > h1 {
-		margin: 48px 0;
+		margin: 24px 0;
 
 		font-size: 32px;
 		font-weight: normal;
@@ -106,14 +125,47 @@ section {
 	}
 }
 
-footer {
-	padding: 20px 0;
+#queHacemos 	{ background: #eee; }
+#contacto 		{ background: #ccc; @include clearfix;}
+#quienesSomos 	{ background: #666; color: #fff; }
+
+.opcionesContacto {
+	width: 95%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.opcionContacto {
+	width: 100%;
 	text-align: center;
+
+	a {
+		color: #000;
+
+		&:hover {
+			color: $c-principal;
+		}
+	}
+
+	.icono {
+		font-size: 24px;
+
+		position: relative;
+		top: 6px;
+
+		margin-right: 2px;
+	}
+
+	& > a {
+		border: none;
+	}
 }
 
+.miembros {
+	text-align: center;
+}
 .unSurrealista {
-	color: #222;
-	text-decoration: none;
+	color: #fff;
+	border: none;
 
 	display: inline-block;
 	width: 128px;
@@ -124,7 +176,13 @@ footer {
 		width: 128px;
 		height: 128px;
 
-		@include border-radius(64px)
+		@include border-radius(64px);
+		@include scale(1);
+		@include transition(0.2s ease all);
+	}
+
+	&:hover > img {
+		@include scale(1.1);
 	}
 
 	& > h3 {
@@ -146,6 +204,11 @@ footer {
 		& > p {
 			font-size: 24px;
 		}
+	}
+
+	.opcionContacto {
+		width: 50%;
+		float: left;
 	}
 }
 
