@@ -6,8 +6,20 @@
 @import "//cloud.typography.com/671958/743122/css/fonts.css";
 
 $ff-normal: 'Archer SSm A', 'Archer SSm B';
-
 $c-principal: #DA275E;
+
+
+@font-face {
+	font-family: "social";
+	src: url('/fonts/ss-social-regular.eot');
+	src: url('/fonts/ss-social-regular.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/ss-social-regular.woff') format('woff'),
+		url('/fonts/ss-social-regular.ttf')  format('truetype'),
+		url('/fonts/ss-social-regular.svg#SSSocialRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 body {
 	font-family: $ff-normal;
@@ -86,6 +98,44 @@ section {
 		text-decoration: none;
 		border-bottom: 1px dotted $c-principal;
 	}
+
+	& > ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+footer {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.unSurrealista {
+	color: #222;
+	text-decoration: none;
+
+	display: inline-block;
+	width: 128px;
+	margin: 10px;
+
+	& > img {
+		display: block;
+		width: 128px;
+		height: 128px;
+
+		@include border-radius(64px)
+	}
+
+	& > h3 {
+		margin: 10px 0;
+		font-size: 12px;
+		text-align: center;
+	}
+}
+
+.icono {
+	font-family: "social";
 }
 
 @media screen and (min-width: 600px) {
