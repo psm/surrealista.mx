@@ -36,13 +36,7 @@ body {
 }
 
 header {
-	// background-image: url(/escritorio.jpg);
-	// background-position: center center;
-	// background-size: cover;
-	// background-attachment: fixed;
-	// background-repeat: no-repeat;
-
-	background: #333;
+	background: #4A4E51;
 
 	padding: 100px 0;
 
@@ -88,8 +82,8 @@ header {
 }
 
 section {
-	padding: 50px 0 75px;
-	@include box-shadow(inset 0 1px rgba(255,255,255, 0.8));
+	padding: 75px 0 100px;
+	@include box-shadow(inset 0 1px rgba(255,255,255, 0.5));
 
 	& > p {
 		width: 95%;
@@ -131,9 +125,9 @@ section {
 	}
 }
 
-#queHacemos 	{ background: #eee; }
-#contacto 		{ background: #ccc; @include clearfix;}
-#quienesSomos 	{ background: #666; color: #fff; }
+#queHacemos 	{ background: #ECF3F7; }
+#contacto 		{ background: #E1E8EC; @include clearfix;}
+#quienesSomos 	{ background: #D6DEE2; }
 
 .opcionesContacto {
 	width: 95%;
@@ -170,17 +164,18 @@ section {
 	text-align: center;
 }
 .unSurrealista {
-	color: #fff;
+	color: inherit;
 	border: none;
 
 	display: inline-block;
-	width: 128px;
-	margin: 10px;
+	width: 150px;
+	margin: 0 0 10px;
 
 	& > img {
 		display: block;
 		width: 128px;
 		height: 128px;
+		margin: 0 auto 10px;
 
 		@include border-radius(64px);
 		@include scale(1);
@@ -193,7 +188,8 @@ section {
 
 	& > h3 {
 		margin: 10px 0;
-		font-size: 12px;
+		font-size: 14px;
+		font-weight: normal;
 		text-align: center;
 	}
 }
