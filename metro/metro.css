@@ -1,0 +1,115 @@
+body {
+	font: 20px/30px Georgia, Times, serif;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	display: block;
+	width: 800px;
+	margin: 10px auto;
+}
+.clear {
+	clear: both;
+	float: none;
+}
+h1 {
+	text-align: center;
+	font-size: 3em;
+	margin: 0;
+	padding: 0;
+
+}
+hr {
+	border: thin solid #555;
+}
+h1 .line1 {
+	display: block;
+	font-size: 50px;
+	line-height: 1.5em;
+	font-weight: 400;
+	font-style: italic;
+}
+h1 .line2 {
+	display: block;
+	font-weight: 400;
+	line-height: 1em;
+}
+h1 .line2 .word1 {
+	font-size: 220px;
+	line-height: 0.5em;
+	display: block;
+	width: 600px;
+	margin: 50px auto 0px;
+}
+.sub {
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0 0 20px;
+}
+footer {
+	font-size: 0.7em;
+}
+footer>p {
+	display: block;
+	float: left;
+	margin: 0;
+}
+footer>a {
+	display: block;
+	float: right;
+}
+#descarga {
+	display: block;
+	margin: 0 auto;
+	width: 620px;
+}
+img {
+	border: 0;
+}
+a {
+	color: #224c93;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+
+#download {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 50px; 
+	line-height: 50px;
+	text-align: center;
+	
+	background: #eee;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+	background: -moz-linear-gradient(center bottom, #eee, #fff);
+	
+	border: 1px solid #cdcdcd;
+	
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+}
+
+.social {
+	float:right;
+	position:absolute;
+	top:10px;
+	right:10px;
+	width:25px;
+	height:25px;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+
+.tuiter {
+	background:url(twitter.png) no-repeat;
+}
+
+.tuiter:hover {
+	background-image:url(twitter2.png);
+}
